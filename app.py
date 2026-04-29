@@ -2180,7 +2180,7 @@ def build_single_job_ui() -> None:
                     hex_value = internal_color_hex_value(selected_row)
                     render_rgb = parse_hex_color(hex_value)
                     render_image = create_color_chip(render_rgb, text=hex_value) if render_rgb is not None else None
-                    meta_parts = [part for part in [internal_color_code(selected_row), hex_value, color_table_base_code(selected_row)] if part]
+                    meta_parts = [part for part in [color_table_color_code(selected_row), hex_value, color_table_base_code(selected_row)] if part]
                     if meta_parts:
                         st.caption(" / ".join(meta_parts))
                     if validation_image is None:
